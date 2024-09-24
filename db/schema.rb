@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_09_24_023834) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_24_231951) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_09_24_023834) do
     t.datetime "updated_at", null: false
     t.bigint "journey_id"
     t.index ["journey_id"], name: "index_destinations_on_journey_id"
+  end
+
+  create_table "distances", force: :cascade do |t|
+    t.integer "start_location_id"
+    t.integer "end_location_id"
+    t.float "distance"
+    t.float "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "journeys", force: :cascade do |t|
