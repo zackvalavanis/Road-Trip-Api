@@ -33,6 +33,6 @@ class DistancesController < ApplicationController
   def destroy 
     @distance = Distance.find_by(id: params[:id])
     @distance.destroy
-    render json: { message: "Photo destroyed successfully" }
+    render json: { message: "Distance destroyed successfully" }
   end 
 end  

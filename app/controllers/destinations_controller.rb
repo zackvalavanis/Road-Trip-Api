@@ -35,7 +35,7 @@ class DestinationsController < ApplicationController
   def destroy 
     @destination = Destination.find_by(id: params[:id])
     @destination.destroy
-    render json: { message: "Photo destroyed successfully" }
+    render json: { message: "Destination destroyed successfully" }
   end 
 
 end

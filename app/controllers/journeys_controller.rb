@@ -32,7 +32,7 @@ class JourneysController < ApplicationController
   def destroy 
     @journey = Journey.find_by(id: params[:id])
     @journey.destroy
-    render json: { message: "Photo destroyed successfully" }
+    render json: { message: "Journey destroyed successfully" }
   end 
 
 end
